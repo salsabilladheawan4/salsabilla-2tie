@@ -1554,6 +1554,7 @@
 
                 <!-- Contoh penggunaan route pada tag href -->
                 <a href="{{ route('mahasiswa.show') }}">Klik Disini</a>
+                <h1 class="mb-1 font-medium">Let's get started</h1>
 
                 <p class="mb-2 text-[#706f6c] dark:text-[#A1A09A]">Laravel has an incredibly rich ecosystem. <br>We
                     suggest starting with the following.</p>
