@@ -36,16 +36,11 @@ class QuestionController extends Controller
             'email.email'=>'Email tidak valid'
         ]);
 
-        $request->validate([
-            'nama'  => 'required|max:10',
-            'email' => ['required','email'],
-            'pertanyaan' => 'required|max:300|min:8',
-        ]);
-
         $data['nama'] = $request->nama;
         $data['email'] = $request->email;
         $data['pertanyaan'] = $request->pertanyaan;
-        return view('home-question-respon', $data);
+        // return view('home-question-respon', $data);
+        return redirect()->route('home')->with('info', 'Terima kasih <b>'.$data['nama'].'</b>! Pertanyaan ini: <b>'.$data['pertanyaan'].'</b> sudah kami terima, kami akan mengirimkan jawaban ke email: <b>'.$data['email'].'</b>');
     }
 
     /**
