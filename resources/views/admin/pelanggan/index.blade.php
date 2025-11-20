@@ -1,3 +1,4 @@
+
 @extends('layouts.admin.app')
 @section('content')
     {{-- Start Main Content --}}
@@ -73,6 +74,7 @@
                                     </div>
                                 @endif
                                 <tr>
+                                    <th>No</th>
                                     <th class="border-0">First Name</th>
                                     <th class="border-0">Last Name</th>
                                     <th class="border-0">Birthday</th>
@@ -83,8 +85,9 @@
                                 </tr>
                             </thead>
                             <tbody>
-                                @foreach ($dataPelanggan as $item)
+                                @foreach ($dataPelanggan as $index=> $item)
                                     <tr>
+                                        <td>{{ $dataPelanggan->Firstitem() + $index }}</td>
                                         <td>{{ $item->first_name }}</td>
                                         <td>{{ $item->last_name }}</td>
                                         <td>{{ $item->birthday }}</td>
